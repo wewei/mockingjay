@@ -1,0 +1,24 @@
+.monitor-view {
+    padding: 10px;
+    background: lightyellow;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.close-button {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: grey;
+    z-index: 1000;
+}
+
+.monitor {
+    position: relative;
+    overflow: hidden;
+    background-color: cyan;
+}

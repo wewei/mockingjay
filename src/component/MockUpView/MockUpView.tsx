@@ -1,6 +1,7 @@
 import { useCallback, useRef } from "react";
 import WindowManager from "../../module/WindowManager"
 import { useOb } from "../../util/Observable";
+import MonitorView from "./MonitorView";
 
 type MockUpViewProps = {
     windowManager: WindowManager;
@@ -21,7 +22,7 @@ function MockUpView({ windowManager }: MockUpViewProps): JSX.Element {
             <div>Width: <input type="number" defaultValue={0} ref={widthInput}></input></div>
             <div>Height: <input type="number" defaultValue={0} ref={heightInput}></input></div>
             <button onClick={addMonitor}>Add</button>
-            <div>{monitors.length}</div>
+            {monitors.map(({ width, height, id }) => <MonitorView width={width} height={height} monitorId={id} windowManager={windowManager}/>)}
         </div>
     );
 }
